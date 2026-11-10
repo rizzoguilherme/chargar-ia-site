@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade – Chargar</title>
+<meta name="description" content="Política de Privacidade do Chargar: dados do Google acessados, finalidade, armazenamento, processamento por modelos de linguagem, revogação e exclusão.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="marca">CHARGAR</div>
+  <nav aria-label="Principal">
+    <a href="index.html">Início</a>
+    <a href="privacidade.html" aria-current="page">Política de Privacidade</a>
+    <a href="termos.html">Termos de Uso</a>
+  </nav>
+</header>
+<main>
+  <h1>Política de Privacidade</h1>
+  <p class="meta">Última atualização: 10/11/2026.</p>
+
+  <h2>1. Quem somos e o que é o Chargar</h2>
+  <p>O Chargar é um assistente pessoal que conversa pelo Telegram. É um aplicativo particular, desenvolvido e usado apenas pelo seu dono, que é a única pessoa autorizada a usá-lo. Esta política descreve como o Chargar trata os dados das contas Google que o dono autoriza. Como o dono é o único usuário, os dados tratados são os dele mesmo.</p>
+
+  <h2>2. Dados do Google acessados e para quê</h2>
+  <p>O Chargar só acessa dados do Google quando o dono faz um pedido pelo Telegram. Ele não varre, não copia em massa e não monitora as contas em segundo plano. O acesso é feito somente pelos escopos abaixo.</p>
+  <dl>
+    <dt>Google Agenda — <code>calendar.events.owned</code></dt>
+    <dd>Criar eventos na agenda principal do dono, com título, data e hora, descrição e lembrete opcional. <strong>Motivo:</strong> o dono pede ao assistente que marque compromissos e prazos. O Chargar não lista nem lê os eventos existentes, não convida outras pessoas e não apaga eventos.</dd>
+
+    <dt>Gmail, leitura — <code>gmail.readonly</code></dt>
+    <dd>Buscar e-mails e ler o texto simples de uma mensagem (até 20.000 caracteres), além de assunto, remetente e data. <strong>Motivo:</strong> o dono pede resumos e localização de mensagens. Não há alteração, exclusão nem leitura de anexos.</dd>
+
+    <dt>Gmail, envio — <code>gmail.send</code></dt>
+    <dd>Enviar e-mail de texto simples pela conta do dono, com até 5 destinatários, sem cópia (Cc/Bcc) e sem anexo. <strong>Motivo:</strong> o dono pede que o assistente envie mensagens. Cada envio exige aprovação prévia do dono.</dd>
+
+    <dt>Google Drive — <code>drive</code></dt>
+    <dd>Buscar arquivos pelo nome; ler arquivos como texto (até 20.000 caracteres); criar arquivo de texto na raiz; renomear ou substituir o texto de um arquivo; mover um arquivo para a lixeira (reversível); compartilhar um arquivo com uma pessoa, como leitor, comentarista ou editor. <strong>Motivo:</strong> o dono pede que o assistente encontre e organize arquivos que já existem no Drive dele, o que um escopo restrito a arquivos criados pelo próprio aplicativo não permite. O Chargar não exclui definitivamente, não cria link público e não transfere a propriedade de arquivos.</dd>
+
+    <dt>Planilhas Google — <code>spreadsheets</code></dt>
+    <dd>Ler um intervalo de células e sobrescrever valores de um intervalo (até 20 por 20 células). <strong>Motivo:</strong> o dono pede consultas e atualizações em suas planilhas. Não cria nem apaga abas.</dd>
+
+    <dt>Google Tarefas — <code>tasks</code></dt>
+    <dd>Listar tarefas abertas da lista padrão, criar tarefas e marcá-las como concluídas. <strong>Motivo:</strong> o dono gerencia sua lista de tarefas pelo assistente. Não apaga nem edita tarefas.</dd>
+  </dl>
+  <p>O Chargar não acessa dados do Google além do que o dono pede em cada conversa e do que esses escopos permitem.</p>
+
+  <h2>3. Aprovação do dono antes de qualquer escrita</h2>
+  <p>Leituras e buscas são feitas diretamente a pedido do dono. Já toda ação que envia, cria, altera, apaga, compartilha ou grava (enviar e-mail; criar evento; criar, renomear, substituir, apagar ou compartilhar arquivo; sobrescrever células; criar ou concluir tarefa) só ocorre depois de aprovação explícita do dono, dada por um cartão de confirmação no Telegram, por botão ou reação. Sem essa aprovação, nada é escrito. A autorização concedida na tela de consentimento do Google não substitui essa aprovação a cada ação.</p>
+
+  <h2>4. Onde os dados ficam</h2>
+  <ul>
+    <li>O Chargar roda em máquinas que pertencem ao próprio dono (o computador pessoal dele e um servidor particular). Não há servidor do Chargar operado por terceiros para guardar dados do Google.</li>
+    <li>A credencial de acesso (token de atualização) fica em um arquivo local, fora do repositório de código, criado com permissão restrita ao dono (modo 0600; no Windows, herdando a permissão da pasta privada do dono).</li>
+    <li>O conteúdo lido do Google é usado apenas para responder ao pedido em andamento. Ele permanece na memória curta da conversa, que guarda poucos turnos e é descartada quando o dono usa o comando <code>/zerar</code> ou quando o serviço reinicia. O Chargar não monta banco de dados com e-mails, arquivos ou eventos do Google.</li>
+    <li>As respostas aparecem na conversa do dono no Telegram, de modo que o Telegram também trata o texto dessa conversa, conforme a política dele.</li>
+    <li>As chamadas à API do Google usam HTTPS e só vão para endereços do Google definidos no código.</li>
+  </ul>
+
+  <h2>5. Venda e compartilhamento</h2>
+  <p>O Chargar <strong>não vende</strong> dados do Google e <strong>não os compartilha com terceiros</strong> para publicidade, corretagem de dados ou qualquer finalidade própria deles. Não há anúncios. Nenhuma pessoa, além do dono, lê os dados do Google dele. As únicas transferências são as descritas na seção 6.</p>
+
+  <h2>6. Processamento por modelos de linguagem</h2>
+  <p>O Chargar usa modelos de linguagem para entender e responder aos pedidos do dono. O conteúdo da conversa, inclusive o que foi lido de serviços do dono, é enviado ao modelo para que ele responda.</p>
+  <ul>
+    <li><strong>Modelo local (padrão).</strong> Quando o computador do dono está ligado e responde, o processamento é feito por um modelo local (Gemma), no próprio computador do dono. Nesse caso, o texto não é enviado a provedores de modelo de nuvem.</li>
+    <li><strong>Modelos de nuvem gratuitos (somente com o computador desligado).</strong> O dono pode ativar um modo opcional, desligado por padrão. Com ele ativado, e somente quando o computador do dono está desligado ou não responde a tempo, o Chargar pode enviar o histórico da conversa e dados privados do dono a modelos de nuvem gratuitos, acessados com chaves do próprio dono. <strong>Esses provedores podem reter esse texto e usá-lo para treinar seus modelos.</strong> A regra vigente do projeto, que autoriza esse envio, trata de dados privados do dono de forma geral e não exclui o conteúdo vindo do Google; portanto, nessa situação, trechos de e-mails, arquivos, planilhas, eventos ou tarefas presentes na conversa podem ser enviados. O dono é avisado no Telegram na primeira vez em que isso ocorre em cada execução do serviço.</li>
+    <li>Esse modo não permite usar serviços pagos, nem enviar dados a mecanismos de busca, nem executar instruções que venham dentro de e-mails ou documentos, e não dispensa a aprovação do dono para escrever (seção 3). Desativá-lo impede novos envios, mas não desfaz os que já ocorreram: o que um provedor já recebeu fica sujeito às regras dele.</li>
+  </ul>
+
+  <h2>7. Declaração sobre a Política de Dados de Usuário dos Serviços de API do Google</h2>
+  <p>O uso e a transferência, para qualquer outro aplicativo, de informações recebidas das APIs do Google seguirão a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados de Usuário dos Serviços de API do Google</a> (Google API Services User Data Policy), incluindo os requisitos de Uso Limitado (Limited Use), com a ressalva descrita abaixo.</p>
+  <p>Em conformidade com esses requisitos, o Chargar:</p>
+  <ul>
+    <li>usa os dados do Google apenas para fornecer e melhorar as funções que o dono pede, visíveis na interface (o chat do Telegram);</li>
+    <li>não transfere nem vende os dados a terceiros, exceto para fornecer essas funções, por exigência legal ou com a aprovação do dono;</li>
+    <li>não usa os dados para publicidade, nem para criar perfis ou bancos de dados de outras finalidades;</li>
+    <li>não permite que pessoas leiam os dados, exceto o próprio dono, com consentimento dele, ou por obrigação legal.</li>
+  </ul>
+  <p><strong>Ressalva (transparência):</strong> a Política do Google restringe o uso de dados de usuário para treinar modelos de IA. O Chargar em si não treina modelos com os dados do Google. Porém, no caso descrito na seção 6 (modelos de nuvem gratuitos, com o computador desligado), o provedor do modelo, e não o Chargar, pode reter e usar o texto recebido para treino, conforme os termos dele. Esta política declara isso de forma aberta.</p>
+
+  <h2>8. Retenção e exclusão</h2>
+  <ul>
+    <li><strong>Dados do Google:</strong> o Chargar não os guarda de forma permanente (seção 4). A memória curta da conversa é apagada com <code>/zerar</code> ou ao reiniciar o serviço.</li>
+    <li><strong>Token de acesso:</strong> fica no arquivo local até o dono apagá-lo ou revogar o acesso.</li>
+    <li><strong>Dados já enviados a provedores de modelo de nuvem:</strong> o Chargar não consegue apagá-los; dependem das regras de cada provedor.</li>
+    <li><strong>Dados no próprio Google:</strong> e-mails, arquivos, eventos, planilhas e tarefas continuam na conta do dono, sujeitos às regras do Google, e podem ser excluídos por ele nos serviços do Google.</li>
+  </ul>
+
+  <h2>9. Como revogar o acesso</h2>
+  <ol>
+    <li>Acesse <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, escolha o aplicativo Chargar e selecione “Remover acesso”. O token deixa de funcionar imediatamente.</li>
+    <li>Apague o arquivo local do token no computador e no servidor do dono. Sem o arquivo, o Chargar não consegue acessar a conta Google.</li>
+    <li>Opcionalmente, desative o modo de nuvem para impedir novos envios a provedores de modelo.</li>
+  </ol>
+
+  <h2>10. Crianças</h2>
+  <p>O Chargar é de uso pessoal e não é direcionado a crianças.</p>
+
+  <h2>11. Alterações desta política</h2>
+  <p>Esta política pode ser atualizada. A data da última atualização aparece no topo desta página.</p>
+
+  <h2>12. Contato</h2>
+  <p>Dúvidas sobre esta política: [EMAIL-DE-CONTATO]</p>
+</main>
+<footer>
+  <p><a href="index.html">Início</a> · <a href="termos.html">Termos de Uso</a></p>
+</footer>
+</body>
+</html>
