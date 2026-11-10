@@ -63,29 +63,28 @@
   <p>O Chargar <strong>não vende</strong> dados do Google e <strong>não os compartilha com terceiros</strong> para publicidade, corretagem de dados ou qualquer finalidade própria deles. Não há anúncios. Nenhuma pessoa, além do dono, lê os dados do Google dele. As únicas transferências são as descritas na seção 6.</p>
 
   <h2>6. Processamento por modelos de linguagem</h2>
-  <p>O Chargar usa modelos de linguagem para entender e responder aos pedidos do dono. O conteúdo da conversa, inclusive o que foi lido de serviços do dono, é enviado ao modelo para que ele responda.</p>
+  <p>O Chargar usa modelos de linguagem para entender e responder aos pedidos do dono.</p>
   <ul>
-    <li><strong>Modelo local (padrão).</strong> Quando o computador do dono está ligado e responde, o processamento é feito por um modelo local (Gemma), no próprio computador do dono. Nesse caso, o texto não é enviado a provedores de modelo de nuvem.</li>
-    <li><strong>Modelos de nuvem gratuitos (somente com o computador desligado).</strong> O dono pode ativar um modo opcional, desligado por padrão. Com ele ativado, e somente quando o computador do dono está desligado ou não responde a tempo, o Chargar pode enviar o histórico da conversa e dados privados do dono a modelos de nuvem gratuitos, acessados com chaves do próprio dono. <strong>Esses provedores podem reter esse texto e usá-lo para treinar seus modelos.</strong> A regra vigente do projeto, que autoriza esse envio, trata de dados privados do dono de forma geral e não exclui o conteúdo vindo do Google; portanto, nessa situação, trechos de e-mails, arquivos, planilhas, eventos ou tarefas presentes na conversa podem ser enviados. O dono é avisado no Telegram na primeira vez em que isso ocorre em cada execução do serviço.</li>
-    <li>Esse modo não permite usar serviços pagos, nem enviar dados a mecanismos de busca, nem executar instruções que venham dentro de e-mails ou documentos, e não dispensa a aprovação do dono para escrever (seção 3). Desativá-lo impede novos envios, mas não desfaz os que já ocorreram: o que um provedor já recebeu fica sujeito às regras dele.</li>
+    <li><strong>Dados do Google: somente modelo local.</strong> O conteúdo que vem do Google (e-mails, arquivos, planilhas, eventos e tarefas) é processado exclusivamente por um modelo local (Gemma), no computador do próprio dono. Esse conteúdo nunca é enviado a modelos de nuvem nem a outros provedores de modelo.</li>
+    <li><strong>Computador desligado.</strong> Quando o computador do dono está desligado ou não responde, o Chargar não processa dados do Google: ele informa que não consegue acessá-los naquele momento.</li>
+    <li>Conversas que não envolvem dados do Google podem, conforme a configuração do dono, usar outros modelos; isso não inclui conteúdo obtido do Google.</li>
   </ul>
 
   <h2>7. Declaração sobre a Política de Dados de Usuário dos Serviços de API do Google</h2>
-  <p>O uso e a transferência, para qualquer outro aplicativo, de informações recebidas das APIs do Google seguirão a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados de Usuário dos Serviços de API do Google</a> (Google API Services User Data Policy), incluindo os requisitos de Uso Limitado (Limited Use), com a ressalva descrita abaixo.</p>
+  <p>O uso e a transferência, para qualquer outro aplicativo, de informações recebidas das APIs do Google seguirão a <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de Dados de Usuário dos Serviços de API do Google</a> (Google API Services User Data Policy), incluindo os requisitos de Uso Limitado (Limited Use).</p>
   <p>Em conformidade com esses requisitos, o Chargar:</p>
   <ul>
     <li>usa os dados do Google apenas para fornecer e melhorar as funções que o dono pede, visíveis na interface (o chat do Telegram);</li>
     <li>não transfere nem vende os dados a terceiros, exceto para fornecer essas funções, por exigência legal ou com a aprovação do dono;</li>
     <li>não usa os dados para publicidade, nem para criar perfis ou bancos de dados de outras finalidades;</li>
+    <li>não usa os dados para desenvolver, melhorar ou treinar modelos de IA ou de aprendizado de máquina generalistas;</li>
     <li>não permite que pessoas leiam os dados, exceto o próprio dono, com consentimento dele, ou por obrigação legal.</li>
   </ul>
-  <p><strong>Ressalva (transparência):</strong> a Política do Google restringe o uso de dados de usuário para treinar modelos de IA. O Chargar em si não treina modelos com os dados do Google. Porém, no caso descrito na seção 6 (modelos de nuvem gratuitos, com o computador desligado), o provedor do modelo, e não o Chargar, pode reter e usar o texto recebido para treino, conforme os termos dele. Esta política declara isso de forma aberta.</p>
 
   <h2>8. Retenção e exclusão</h2>
   <ul>
     <li><strong>Dados do Google:</strong> o Chargar não os guarda de forma permanente (seção 4). A memória curta da conversa é apagada com <code>/zerar</code> ou ao reiniciar o serviço.</li>
     <li><strong>Token de acesso:</strong> fica no arquivo local até o dono apagá-lo ou revogar o acesso.</li>
-    <li><strong>Dados já enviados a provedores de modelo de nuvem:</strong> o Chargar não consegue apagá-los; dependem das regras de cada provedor.</li>
     <li><strong>Dados no próprio Google:</strong> e-mails, arquivos, eventos, planilhas e tarefas continuam na conta do dono, sujeitos às regras do Google, e podem ser excluídos por ele nos serviços do Google.</li>
   </ul>
 
@@ -93,7 +92,6 @@
   <ol>
     <li>Acesse <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, escolha o aplicativo Chargar e selecione “Remover acesso”. O token deixa de funcionar imediatamente.</li>
     <li>Apague o arquivo local do token no computador e no servidor do dono. Sem o arquivo, o Chargar não consegue acessar a conta Google.</li>
-    <li>Opcionalmente, desative o modo de nuvem para impedir novos envios a provedores de modelo.</li>
   </ol>
 
   <h2>10. Crianças</h2>
